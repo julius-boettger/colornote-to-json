@@ -16,7 +16,7 @@ java -cp $decryptor_path/lib/bcprov-jdk15on-154.jar:$decryptor_path/lib/bcpkix-j
     < $input \
     | $decryptor_path/fixup-v2 \
     | tail -n +2 \
-    | jq -s '[ .[] | {title, note, created_date,  modified_date} ]' \
+    | jq -s '[ .[] | {title, content: .note} ]' \
     > $output
 
 if [ $? == 0 ]; then

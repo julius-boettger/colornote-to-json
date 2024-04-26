@@ -5,10 +5,8 @@ Takes an encrypted ColorNote backup file as the input and outputs a JSON file co
 ```json
 [
     {
-        "title": "Title the note",
-        "note": "Content of the note",
-        "created_date": 1713960885674,
-        "modified_date": 1713960885674
+        "title": "Title of the note",
+        "content": "Content of the note"
     },
     ...
 ]
